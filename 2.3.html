@@ -1,0 +1,94 @@
+<HTML>
+	<!--encabezado-->
+<HEAD><TITLE>ITS</TITLE>
+	<LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+	<LINK rel="icon TYPE="its/png"  HREF="imagenes/its.png">
+</HEAD>
+<BODY>
+<Center><H1>Arquitectura de Computadoras</H1></CEnter>
+	<div id= "Header">
+	  
+		
+<!--Menu-->
+		
+<UL CLASS= menu>
+<Li><A Href="paginaprincipal.html">Inicio</A></LI>
+
+
+<Li><A Href="Unidad1.html">Unidad 1</A>
+	<UL class="submenu">
+		<LI id="item"><A Href="1.1.html">1.1 Modelos de Arquitecturas de Computo</A></LI>
+		<LI id="item"><A Href="1.2.html">1.2 Memorias</A></LI>
+	</UL></LI>
+
+<LI><A Href="Unidad2.html">Unidad 2</A>
+ 	<UL class="submenu">
+		<LI id="item"><A Href="2.1.html">2.1 Organizacion del Procesador</A></LI>
+		<LI id="item"><A Href="2.2.html">2.2 Estructuras de Registros</A></LI>
+		<LI id="item"><A Href="2.3.html">2.3 Ciclo de Instrucciones</A></LI>
+		<LI id="item"><A Href="2.4.html">2.4 Casos de Estudio del CPU Reales</A></LI>
+	</UL></li>
+
+<Li><A Href="Unidad3.html">Unidad 3</A>
+<UL class="submenu">
+		<LI id="item"><A Href="3.1.html">3.1 Chip de Set</A></LI>
+		<LI id="item"><A Href="3.2.html">3.2 Aplicaciones</A></LI>
+		<LI id="item"><A Href="3.3.html">3.3 Ambientes de Servicio</A></LI>
+	</UL></LI>
+
+<Li><A Href="Unidad4.html">Unidad 4</A>
+<UL class="submenu">
+		<LI id="item"><A Href="4.1.html">4.1 Aspectos Básicos de Computación</A></LI>
+		<LI id="item"><A Href="4.2.html">4.2 Tipos de Computación Paralela</A></LI>
+		<LI id="item"><A Href="4.3.html">4.3 Sistemas de Memoria Compartida(Multiprocesadores)</A></LI>
+		<LI id="item"><A Href="4.4.html">4.4 Sistemas de Memoria Distribuida (Multicomputadoras)</A></LI>
+		<LI id="item"><A Href="4.5.html">4.5 Casos para Estudio</A></LI>
+	</UL></LI>
+
+
+	 </UL>
+	</div>
+<!--Termina menu-->
+
+
+
+	</DIV>
+	
+	<bR><bR>
+	<h3>2.3 Ciclo de Instrucciones:</h3> 
+	<p> Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de fetchdecode-execute en inglés) es el período que tarda la unidad central de proceso (CPU) en ejecutar una instrucción de lenguaje máquina.
+    Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada instrucción en un programa. Cada instrucción del juego de instrucciones de una CPU puede requerir diferente número de ciclos de instrucción para su ejecución. Un ciclo de instrucción está formado por uno o más ciclos máquina.
+ </p>
+
+	<h4>2.3.1 Ciclo Fetch-Decode-Excecute</h4>
+	<p> El encargado de ejecutar un programa en una computadora u otro sistema computacional es el CPU, lo realiza siguiendo el llamado ciclo Fetch Decode Execute, con este ciclo se ejecutan todas las tareas que una computadora puede realizar.
+    Este ciclo tiene algunas variantes y conforme ha avanzado el tiempo y la tecnología ha sufrido algunos cambios, pero el ciclo básico se conforma de las siguientes etapas: </p>
+	
+	<p><ul>
+    <li><p> Traer la instrucción: Se obtiene la instrucción desde memoria y se almacena en el registro del CPU para instrucciones. </li></p>
+    <li><p> Decodificar la instrucción: Se identifica el modo de direccionamiento de la instrucción y la ubicación de los datos a tratar, ya sea de memoria, registro o instrucción directamente. </li></p>
+    <li><p> Carga de Parámetros: Se ejecuta la lectura, cargando todos los datos identificados en el paso anterior. </li></p>
+    <li><p> Ejecutar: Se ejecuta la instrucción ya configurada, realiza la tarea indicada, ya sea una suma, resta, almacenar información, extraer información etc. </li></p>
+    <li><p> Almacenar: Se almacena el resultado obtenido de ejecutar la instrucción, por ejemplo, el resultado de una suma o un índice (Número) como resultado de éxito de almacenar u obtener información de un archivo, entre otros. </li></p>
+    <li><p> Actualizar PC: Esta etapa es la de actualizar el registro PC (Program Counter) que contiene la siguiente dirección a ejecutar. </li></p>
+    </ul></p>
+
+    <center><img src="imagenes/img2.3.webp"  WIDTH="40%" HEIGHT="50%"></center>
+
+    <h4>2.3.2 Segmentación de instrucciones: </h4>
+	<p> Es una técnica que permite implementar el paralelismo a nivel de instrucción en un único procesador. La segmentación intenta tener ocupadas con instrucciones todas las partes del procesador dividiendo las instrucciones en una serie de pasos secuenciales que efectuarán distintas unidades de la CPU, tratando en paralelo diferentes partes de las instrucciones. Permite una mayor tasa de transferencia efectiva por parte de la CPU que la que sería posible a una determinada frecuencia de reloj, pero puede aumentar la latencia debido al trabajo adicional que supone el propio proceso de la segmentación. </p>
+
+	<h4> 2.3.3	Conjunto de instrucciones: </h4>
+	<p> Una máquina puede llegar a funcionar con un juego de instrucciones muy limitado (recuérdese, por ejemplo, la máquina de Turing que sólo tiene 4 instrucciones, incluso se han diseñado máquinas teóricas con menos instrucciones), esto simplificaría mucho los circuitos de la máquina. Sin embargo, un conjunto de instrucciones demasiado simplificado origina, como consecuencia, unos programas demasiado complejos e ineficientes. Es necesario encontrar un compromiso entre la simplicidad del hardware y del software. Un mínimo para llegar a ese compromiso se consigue con los tipos de instrucciones siguientes: Instrucciones de transferencia de datos. Instrucciones aritméticas. Instrucciones lógicas. Instrucciones de control del flujo del programa (bifurcaciones, bucles, procedimientos, etc.) Instrucciones de entrada y salida. En los apartados siguientes iremos viendo con detalle algunos de estos tipos de instrucciones. Si bien es cierto que el conjunto de instrucciones debe de cumplir unos mínimos para conseguir una mínima eficiencia en los programas, también se verá que ésta no se aumenta indefinidamente al incrementar el número de instrucciones de la máquina. </p>
+
+	<h4> 2.3.4 Modelos de direccionamiento: </h4>
+	<p> Son un mecanismo que permite conocer la ubicación de un objeto (dato o instrucción).
+     Un computador debe disponer de varios modos de direccionamiento.
+     No todos los modos de direccionamiento están implementados en todos los computadores.
+     Los modos de direccionamiento disponibles están determinados por la arquitectura interna de la máquina y por el repertorio de instrucciones.
+     La Dirección efectiva de un operando (EA): Se refiere a la dirección de una localidad de memoria con respecto a una dirección inical de un segmento, estas pueen tomar valores que van desde 0000H hasta FFFFH (H: valor en hexadecimal).
+     Dirección física (PA):   también llamada dirección final, esta es calculada con la dirección efectiva y un registro de segmento a propiado.
+     Fórmula para calcuar la dirección física: PA=EA+10H+Despazamiento </p>
+
+</BODY>
+</HTML>
